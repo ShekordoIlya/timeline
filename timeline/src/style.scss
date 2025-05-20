@@ -4,6 +4,20 @@
         padding: 0;
       }
 
+      @mixin oddButton() {
+        top:35px;
+        right: 382px;
+      }
+
+      @mixin evenButton() {
+        top:35px;
+        right: -18px;
+      }
+
+      @mixin topBtnForTablet{
+        top:10px !important;
+      }
+
       body {
         font-family: Arial, sans-serif;
         background: #f9f9f9;
@@ -120,33 +134,27 @@
 
       
       .first-btn{
-        top:35px;
-        right: 382px;
+        @include oddButton;
       }
 
       .second-btn{
-        top:35px;
-        right: -18px;
+        @include evenButton;
       }
 
       .third-btn{
-        top:35px;
-        right: 382px;
+        @include oddButton;
       }
 
       .fourth-btn{
-        top:35px;
-        right: -18px;
+        @include evenButton;
       }
 
       .fives-btn{
-        top:35px;
-        right: 382px;
+        @include oddButton;
       }
 
       .sixs-btn{
-        top:35px;
-        right: -18px;
+        @include evenButton;
       }
 
       .content {
@@ -208,27 +216,27 @@
         }
 
         .first-btn{
-        top:10px !important; 
+        @include topBtnForTablet; 
       }
 
       .second-btn{
-        top:10px !important;
+        @include topBtnForTablet;
       }
 
       .third-btn{
-        top:10px !important;
+        @include topBtnForTablet;
       }
 
       .fourth-btn{
-        top:10px !important;
+        @include topBtnForTablet;
       }
 
       .fives-btn{
-        top:10px !important;
+        @include topBtnForTablet;
       }
 
       .sixs-btn{
-        top:10px !important;
+        @include topBtnForTablet;
       }
 
         .content {
