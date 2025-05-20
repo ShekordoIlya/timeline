@@ -27,7 +27,10 @@ const timeline = document.querySelector(".timeline");
           if (rect.top < viewportH) {
             entry.classList.add("visible");
             entry.querySelector(".content").style.display = "block";
+          } else if(rect.top > viewportH) {
+            entry.classList.remove("visible");
           }
+          
           // закраска кнопки, если прогресс выше кнопки
           const btn = entry.querySelector(".btn");
           const btnY = scrollTop + rect.top + btn.offsetTop;

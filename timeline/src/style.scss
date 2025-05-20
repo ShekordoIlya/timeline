@@ -8,6 +8,7 @@
         font-family: Arial, sans-serif;
         background: #f9f9f9;
         padding: 100px 20px;
+        
       }
 
       .timeline {
@@ -15,9 +16,8 @@
         margin: 0 auto;
         width: 90%;
         max-width: 800px;
-      }
 
-      .timeline::before {
+        &::before {
         content: "";
         position: absolute;
         top: 0;
@@ -48,18 +48,19 @@
         transform: translateY(40px);
         opacity: 0;
         transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-      }
 
-      .entry.visible {
+        &.visible {
         opacity: 1;
         transform: translateY(0);
+        transition: opacity 2s ease-out, transform 2s ease-out;
+
       }
 
-      .entry:nth-child(odd) {
+        &:nth-child(odd) {
         left: 0;
       }
 
-      .entry:nth-child(even) {
+        &:nth-child(even) {
         left: 50%;
       }
 
@@ -70,22 +71,25 @@
         font-size: 20px;
         font-weight: bold;
         color: #222;
+
+        .first-year{
+          top: -30px;
+        }
       }
 
-      .entry:nth-child(odd) .year {
-        right: -30px;
+        &:nth-child(odd) .year {
+        right: -23px;
         text-align: right;
       }
 
-      .entry:nth-child(even) .year {
-        left: -30px;
+        &:nth-child(even) .year {
+        left: -23px;
         text-align: left;
       }
 
+
       .btn {
         position: absolute;
-        top: 0;
-        left: 50%;
         width: 36px;
         height: 36px;
         margin-left: -18px;
@@ -99,33 +103,61 @@
         justify-content: center;
         padding: 0;
         transition: background-color 0.3s;
-      }
-
-      .btn svg {
+        svg {
         width: 20px;
         height: 20px;
         fill: #222;
         transition: fill 0.3s;
       }
 
-      .btn.passed {
+      &.passed {
         background-color: #c00;
+        svg {
+        fill: #c00;
+      }
+      }
       }
 
-      .btn.passed svg {
-        fill: #fff;
+      
+      .first-btn{
+        top:35px;
+        right: 382px;
+      }
+
+      .second-btn{
+        top:35px;
+        right: -18px;
+      }
+
+      .third-btn{
+        top:35px;
+        right: 382px;
+      }
+
+      .fourth-btn{
+        top:35px;
+        right: -18px;
+      }
+
+      .fives-btn{
+        top:35px;
+        right: 382px;
+      }
+
+      .sixs-btn{
+        top:35px;
+        right: -18px;
       }
 
       .content {
-        margin-top: 40px;
+        margin-top: 80px;
         background: #fff;
         padding: 15px;
         border-radius: 6px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         display: none;
-      }
 
-      .content img {
+        img {
         max-width: 100%;
         border-radius: 4px;
         margin-bottom: 10px;
@@ -133,17 +165,19 @@
         transform: translateY(20px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         display: block;
-      }
 
-      .content img.loaded {
+        &.loaded {
         opacity: 1;
         transform: translateY(0);
       }
-
-      .content p {
+      }
+      p {
         font-size: 14px;
         line-height: 1.4;
         color: #333;
+      }
+      }
+      }
       }
 
        /* планшетка */
@@ -159,21 +193,48 @@
           padding-right: 20px !important;
           left: 0 !important;
           margin-bottom: 50px;
-        }
-        .entry:nth-child(odd) .year,
-        .entry:nth-child(even) .year {
+
+          &:nth-child(odd) .year,
+          &:nth-child(even) .year {
           left: 0 !important;
           right: auto !important;
           text-align: left !important;
           top: -24px;
         }
+
         .btn {
-          left: 20px !important;
+          left: 4px !important;
           margin-left: 0 !important;
         }
+
+        .first-btn{
+        top:10px !important; 
+      }
+
+      .second-btn{
+        top:10px !important;
+      }
+
+      .third-btn{
+        top:10px !important;
+      }
+
+      .fourth-btn{
+        top:10px !important;
+      }
+
+      .fives-btn{
+        top:10px !important;
+      }
+
+      .sixs-btn{
+        top:10px !important;
+      }
+
         .content {
           margin-left: 60px !important;
           margin-top: 10px !important;
+        }
         }
       }
       /* планшетка */
